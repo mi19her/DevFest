@@ -1,10 +1,10 @@
 import {createAppContainer} from 'react-navigation';
 import {createStackNavigator} from 'react-navigation-stack';
-import HomeScreen from './components/Home';
+import FixedLabelExample from './components/Login';
 // import ProfileScreen from './components/Profile';
 
 const MainNavigator = createStackNavigator({
-  Home: {screen: HomeScreen},
+  Login: {screen: FixedLabelExample},
 });
 
 const App = createAppContainer(MainNavigator);
