@@ -1,19 +1,26 @@
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
-
-export default function App() {
+import React, { Component } from 'react';
+import { Image } from 'react-native';
+import { Container, Header, Content, Form, Item, Input, Label,Button, Text} from 'native-base';
+export default class FixedLabelExample extends Component {
+  render() {
     return (
-    <View style={styles.container}>
-      <Text> hola gabi andrea!</Text>
-    </View>
-  );
-}
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+      <Container>
+        <Header />
+        <Content>
+        <Image source={require('./img/logo-1.png')} style= {{width:160, height:30}} />
+          <Form>
+            <Item fixedLabel>
+              <Label>Username</Label>
+              <Input />
+            </Item>
+            <Item fixedLabel last>
+              <Label>Password</Label>
+              <Input />
+            </Item>
+          </Form>
+          <Button success><Text> Success </Text></Button>
+        </Content>
+      </Container>
+    );
   }
-});
+}
