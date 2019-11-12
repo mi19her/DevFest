@@ -19,7 +19,7 @@ export default class FixedLabelExample extends Component {
               <Input />
             </Item>
           </Form>
-          <Button success>
+          <Button success onPress={() => navigate()}>
             <Text> Success </Text>
           </Button>
         </Content>
