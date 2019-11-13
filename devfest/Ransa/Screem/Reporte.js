@@ -2,7 +2,6 @@
 import React, { Component } from "react";
 import { Container, Footer, Content} from 'native-base';
 import {StyleSheet, View, Text} from "react-native";
-import Slider from '../Components/Slider';
 import ProgressCircle from 'react-native-progress-circle'
 export default class Reporte extends Component {
     static navigationOptions = {
@@ -55,9 +54,7 @@ export default class Reporte extends Component {
             </View>
           </View>
           </View>
-          <Slider/>
           </View>
-      
         <Footer/> 
         </Content>
       </Container>

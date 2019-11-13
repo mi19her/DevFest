@@ -52,7 +52,7 @@ export default class FixedLabelExample extends Component {
             </Item>
             <Item fixedLabel last>
               <Label>Password</Label>
-              <Input />
+              <Input/>
             </Item>
           </Form>
           <Button success block onPress={() => navigate('Menu')}>

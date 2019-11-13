@@ -1,57 +1,112 @@
 import React, { Component } from 'react';
-import { Container, Header, Content, List, ListItem, Thumbnail, Text, Left, Body, Right, Button } from 'native-base';
+import {StyleSheet,Image} from 'react-native';
+import { View, Text, Container ,Left, Right, Body} from 'native-base';
+import AutocompleteInput from '../Components/Autocomplete-input';
 export default class ListThumbnailExample extends Component {
   render() {
     return (
       <Container>
-        <Header />
-        <Content>
-          <List>
-            <ListItem thumbnail>
-              <Left>
-                <Thumbnail square source={{ uri: 'Image URL' }} />
-              </Left>
-              <Body>
-                <Text>Sankhadeep</Text>
-                <Text note numberOfLines={1}>Its time to build a difference . .</Text>
-              </Body>
-              <Right>
-                <Button transparent>
-                  <Text>View</Text>
-                </Button>
-              </Right>
-            </ListItem>
-            <ListItem thumbnail>
-              <Left>
-                <Thumbnail square source={{ uri: 'Image URL' }} />
-              </Left>
-              <Body>
-                <Text>Sankhadeep</Text>
-                <Text note numberOfLines={1}>Its time to build a difference . .</Text>
-              </Body>
-              <Right>
-                <Button transparent>
-                  <Text>View</Text>
-                </Button>
-              </Right>
-            </ListItem>
-                 <ListItem thumbnail>
-              <Left>
-                <Thumbnail square source={{ uri: 'Image URL' }} />
-              </Left>
-              <Body>
-                <Text>Sankhadeep</Text>
-                <Text note numberOfLines={1}>Its time to build a difference . .</Text>
-              </Body>
-              <Right>
-                <Button transparent>
-                  <Text>View</Text>
-                </Button>
-              </Right>
-            </ListItem>
-          </List>
-        </Content>
-      </Container>
+        <View>
+        <AutocompleteInput/>
+            <View style={styles.card}>
+              <View style={styles.subCar}>
+                <View style={styles.icon}>
+                  <Image source={require("../img/car.png")} style={{ width: "15%", height: "17%" ,padding:"5%" ,margin:"3%"}}/>
+                  <Text style={styles.font}>   AVL - 855</Text>
+                </View>
+                <View style={styles.icon}>
+                  <Image source={require("../img/house.png")} style={{ width: "15%", height: "17%" ,padding:"5%" ,margin:"3%"}}/>
+                  <Text style={styles.fontLess}>   3 destinos</Text>
+                </View>
+                <View style={styles.icon}>
+                  <Image source={require("../img/box.png")} style={{ width: "15%", height: "17%" ,padding:"5%", margin:"3%"}}/>
+                  <Text style={styles.fontLess}>   4/5 órdenes</Text>
+                </View> 
+              </View>
+              <View style={styles.ContainerIcon}>
+              <View style={styles.icon}>
+                  <Image source={require("../img/time-red.png")} style={{ width: "15%", height: "17%" ,padding:"5%",  margin:"6%"}}/>
+                  <Text style={styles.fontLess}>   En tránsito</Text>
+              </View>      
+              </View>
+          </View>
+          <View style={styles.card}>
+              <View style={styles.subCar}>
+                <View style={styles.icon}>
+                  <Image source={require("../img/car.png")} style={{ width: "15%", height: "17%" ,padding:"5%" ,margin:"3%"}}/>
+                  <Text style={styles.font}>   AVL - 855</Text>
+                </View>
+                <View style={styles.icon}>
+                  <Image source={require("../img/house.png")} style={{ width: "15%", height: "17%" ,padding:"5%" ,margin:"3%"}}/>
+                  <Text style={styles.fontLess}>   3 destinos</Text>
+                </View>
+                <View style={styles.icon}>
+                  <Image source={require("../img/box.png")} style={{ width: "15%", height: "17%" ,padding:"5%", margin:"3%"}}/>
+                  <Text style={styles.fontLess}>   4/5 órdenes</Text>
+                </View> 
+              </View>
+              <View style={styles.ContainerIcon}>
+              <View style={styles.icon}>
+                  <Image source={require("../img/time-red.png")} style={{ width: "15%", height: "17%" ,padding:"5%",  margin:"6%"}}/>
+                  <Text style={styles.fontLess}>   En tránsito</Text>
+              </View>      
+              </View>
+          </View>
+          <View style={styles.card}>
+              <View style={styles.subCar}>
+                <View style={styles.icon}>
+                  <Image source={require("../img/car.png")} style={{ width: "15%", height: "17%" ,padding:"5%" ,margin:"3%"}}/>
+                  <Text style={styles.font}>   AVL - 855</Text>
+                </View>
+                <View style={styles.icon}>
+                  <Image source={require("../img/house.png")} style={{ width: "15%", height: "17%" ,padding:"5%" ,margin:"3%"}}/>
+                  <Text style={styles.fontLess}>   3 destinos</Text>
+                </View>
+                <View style={styles.icon}>
+                  <Image source={require("../img/box.png")} style={{ width: "15%", height: "17%" ,padding:"5%", margin:"3%"}}/>
+                  <Text style={styles.fontLess}>   4/5 órdenes</Text>
+                </View> 
+              </View>
+              <View style={styles.ContainerIcon}>
+              <View style={styles.icon}>
+                  <Image source={require("../img/time-green.png")} style={{ width: "15%", height: "17%" ,padding:"5%",  margin:"6%"}}/>
+                  <Text style={styles.fontLess}>  En tránsito</Text>
+              </View>      
+              </View>
+          </View>
+      </View>
+   </Container>
     );
   }
 }
+const styles = StyleSheet.create({
+  card:{
+    borderBottomColor:'#E5E5E5',
+    borderBottomWidth:0.5,
+    margin:3,
+    paddingTop:15,
+    paddingLeft:14,
+    display:"flex",
+    flexDirection:"row",
+    
+  },
+  subCar:{
+    height:100,
+    width:200
+  },
+  icon:{
+    display:"flex",
+    flexDirection:"row",
+  },
+  font:{
+    color:'#E69526',
+    fontSize:19
+  },
+  fontLess:{
+    color:'black',
+    fontSize:13
+  },
+  ContainerIcon:{
+    height:100
+  }
+})
