@@ -85,7 +85,7 @@
 import * as Font from "expo-font";
 import * as React from 'react';
 import { Text,TextInput,View,ImageBackground, StyleSheet,Image  } from 'react-native';
-import { Button, Icon} from "native-base"
+import { Button, Icon} from "native-base";
 
 
 
@@ -110,8 +110,10 @@ export default class LoginScreen extends React.Component {
       }
 
   render() {
+   
     const {navigate} = this.props.navigation;
     return (
+      
       <ImageBackground source={require("../img/imagenlogin.png")} style={{width: '100%', height: '100%', backgroundColor:'black'}}>
           <View style={styles.container}>
           <Image source={require("../img/logo-1.png")} style={{ width: 280, marginBottom:100,alignSelf:'center' }} />
@@ -131,7 +133,7 @@ export default class LoginScreen extends React.Component {
             </View>
            
             <View style={styles.containerUserName}>
-            <TextInput style={{height: 40, borderColor: 'gray', borderWidth: 1}} onChangeText={(text) => this.setState({input: text})}       />
+            <TextInput value={this.state.password} textContentType={'password'} multiline={false} secureTextEntry={true} onChangeText={(text) => {  this.setState({ password: text }); }} style={styles.input} placeholder='' />
             </View>
 
             <View style={styles.containerSignIn}>
