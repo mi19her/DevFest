@@ -8,7 +8,7 @@ export default class AutoCompleteBasics extends Component {
     this.state = {
       text: '',
       textInputFocus: false,
-      arrayList: ['Apple', 'Mango', 'Guava', 'Muskmelon', 'Watermelon', 'Orange', 'Sapota']
+      arrayList: ['Antamina', 'Sansung', 'Nestlé', 'Claro','PlusPetrol', 'Delosi', 'Sodexo']
     };
   }
 
