@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import MapView from "react-native-maps";
-import { Text, Dimensions, StyleSheet,View,Image } from "react-native";
+import { Text, Dimensions, StyleSheet,Image } from "react-native";
 import { Container, Header, Item, Input, Icon, Button } from "native-base";
 
 export default class SearchBarExample extends Component {
