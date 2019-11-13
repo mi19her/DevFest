@@ -1,10 +1,8 @@
-
 import React, { Component } from "react";
 import { Container, Footer, Content, Header} from 'native-base';
-import { StyleSheet, View, Text} from "react-native";
+import {StyleSheet, View, Text} from "react-native";
 import Slider from '../Components/Slider';
 import ProgressCircle from 'react-native-progress-circle'
-import AutocompleteInput from '../Components/Autocomplete-input';
 import Calendar from '../Components/Calendar'
 
 export default class Reporte extends Component {
@@ -17,64 +15,63 @@ export default class Reporte extends Component {
       };
     
   render() {
- 
+
     return (
       <Container>
-        <Header style={{ backgroundColor: "#009B3A" }}>
+      <Content>
+      <Header style={{ backgroundColor: "#009B3A" }}>
           <Calendar/>
           </Header>
-        <Content>
-          <List>
-            <ListItem thumbnail>
-              <Left>
-                <Thumbnail square source={{ uri: 'Image URL' }} />
-              </Left>
-              <Body>
-                <Text>Sankhadeep</Text>
-                <Text note numberOfLines={1}>Its time to build a difference . .</Text>
-              </Body>
-              <Right>
-                <Button transparent>
-                  <Text>View</Text>
-                </Button>
-              </Right>
-            </ListItem>
-            <ListItem thumbnail>
-              <Left>
-                <Thumbnail square source={{ uri: 'Image URL' }} />
-              </Left>
-              <Body>
-                <Text>Sankhadeep</Text>
-                <Text note numberOfLines={1}>Its time to build a difference . .</Text>
-              </Body>
-              <Right>
-                <Button transparent>
-                  <Text>View</Text>
-                </Button>
-              </Right>
-            </ListItem>
-                 <ListItem thumbnail>
-              <Left>
-                <Thumbnail square source={{ uri: 'Image URL' }} />
-              </Left>
-              <Body>
-                <Text>Sankhadeep</Text>
-                <Text note numberOfLines={1}>Its time to build a difference . .</Text>
-              </Body>
-              <Right>
-                <Button transparent>
-                  <Text>View</Text>
-                </Button>
-              </Right>
-            </ListItem>
-          </List>
-        </Content>
-      </Container>
+     <View>
+       <View style={styles.viewGeneral}>
+       <ProgressCircle
+         percent={30}
+         radius={50}
+         borderWidth={8}
+         color="#3399FF"
+         shadowColor="#999"
+         bgColor="#fff"
+       >
+         <Text style={{ fontSize: 18 }}>{'30%'}</Text>
+       </ProgressCircle>
+       <View style={styles.viewState}>
+         <View>
+         <Text>5</Text>
+         <Text>PENDIENTE</Text>
+         </View>
+         <View>
+         <Text>5</Text>
+         <Text>PENDIENTE</Text>
+         </View>
+         <View>
+         <Text>5</Text>
+         <Text>PENDIENTE</Text>
+         </View>
+         <View>
+         <Text>5</Text>
+         <Text>PENDIENTE</Text>
+         </View>
+         <View>
+         <Text>5</Text>
+         <Text>PENDIENTE</Text>
+         </View>
+         <View>
+         <Text>5</Text>
+         <Text>PENDIENTE</Text>
+         </View>
+       </View>
+       </View>
+       <Slider/>
+       </View>
+   
+     <Footer/> 
+     </Content>
+   </Container>
     );
   }
 }
 
-const styles = StyleSheet.create ( {
+const styles =StyleSheet.create ( {
   viewGeneral :{
     backgroundColor:'#009B3A',
     display:"flex",
