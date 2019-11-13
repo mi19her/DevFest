@@ -1,28 +1,10 @@
-
-import React, { Component } from "react";
-import { Container, Footer, Content, Header} from 'native-base';
-import { StyleSheet, View, Text} from "react-native";
-import Slider from '../Components/Slider';
-import ProgressCircle from 'react-native-progress-circle'
-import AutocompleteInput from '../Components/Autocomplete-input';
-import Calendar from '../Components/Calendar'
-
-export default class Reporte extends Component {
-    static navigationOptions = {
-        title: 'Tracking',
-        headerTintColor:'#fff',
-        headerStyle:{
-          backgroundColor:'#009B3A',         
-        },
-      };
-    
+import React, { Component } from 'react';
+import { Container, Header, Content, List, ListItem, Thumbnail, Text, Left, Body, Right, Button } from 'native-base';
+export default class ListThumbnailExample extends Component {
   render() {
- 
     return (
       <Container>
-        <Header style={{ backgroundColor: "#009B3A" }}>
-          <Calendar/>
-          </Header>
+        <Header />
         <Content>
           <List>
             <ListItem thumbnail>
@@ -73,23 +55,3 @@ export default class Reporte extends Component {
     );
   }
 }
-
-const styles = StyleSheet.create ( {
-  viewGeneral :{
-    backgroundColor:'#009B3A',
-    display:"flex",
-    flexDirection:"row",
-    alignItems:"center",
-    padding:10
-  },
-  viewState:{
-    backgroundColor:'white',
-    display:"flex",
-    flexDirection:"row",
-    flexWrap:"wrap",
-    margin:3, 
-    borderColor:"black",
-    borderWidth: 0.5,
-  }
-  
-})
