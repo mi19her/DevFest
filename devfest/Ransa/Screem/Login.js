@@ -1,9 +1,45 @@
+import { AppLoading } from "expo";
+import * as Font from "expo-font";
 import React, { Component } from "react";
 import { Image } from "react-native";
-import { Container, Header, Content, Form, Item, Input, Label, Button, Text } from "native-base";
+import {
+  Root,
+  Container,
+  Header,
+  Content,
+  Form,
+  Item,
+  Input,
+  Label,
+  Button,
+  Text,
+} from "native-base";
+
 
 export default class FixedLabelExample extends Component {
+  constructor(props) {
+    super(props);
+    this.state = { loading: true };
+  }
+
+  async componentWillMount() {
+    await Font.loadAsync({
+      Roboto: require("../node_modules/native-base/Fonts/Roboto.ttf"),
+      Roboto_medium: require("../node_modules/native-base/Fonts/Roboto_medium.ttf"),
+    });
+    this.setState({ loading: false });
+  }
+
   render() {
+    if (this.state.loading) {
+      return (
+        <Root>
+          <AppLoading />
+        </Root>
+      );
+    }
+    
+    const {navigate} = this.props.navigation;
     return (
       <Container>
         <Header />
@@ -19,7 +55,7 @@ export default class FixedLabelExample extends Component {
               <Input />
             </Item>
           </Form>
-          <Button success onPress={() => navigate()}>
+          <Button success onPress={() => navigate('Menu')}>
             <Text> Success </Text>
           </Button>
         </Content>

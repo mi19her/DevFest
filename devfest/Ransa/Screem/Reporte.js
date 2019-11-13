@@ -1,58 +1,24 @@
-import React ,{Component}from "react";
-import { StyleSheet, View, Text} from "react-native";
-export default class MainReporter extends Component {
+
+import React, { Component } from "react";
+import { Container, Footer, Content} from 'native-base';
+import { View, Text} from "react-native";
+import AutocompleteInput from '../Components/Autocomplete-input';
+export default class Reporte extends Component {
+    static navigationOptions = {
+        title: 'Welcome to Report',
+      };
   render() {
     return (
-      <View style={styles.containerView}>
-        <View styles={styles.view}>
+       <Container>
+         <Content>
+        <AutocompleteInput/>
+        <View>
           <Text>TOTAL DE ORDENES</Text>
-          <Text>numero</Text>
-        </View>
-        <View styles={styles.labelView}>
-          <Text>PENDIENTE</Text>
-          <Text>numero</Text>
-        </View>
-        <View styles={styles.view}>
-          <Text>ENTREGADO</Text>
-          <Text>numero</Text>
-        </View>
-        <View styles={styles.view}>
-          <Text>ENTREGA PARCIAL</Text>
-          <Text>numero</Text>
-        </View>
-        <View styles={styles.view}>
-          <Text>RECHAZADO</Text>
-          <Text>numero</Text>
-        </View>
-        <View styles={styles.view}>
-          <Text>CANCELADO</Text>
-          <Text>numero</Text>
-        </View>
-        <View styles={styles.view}>
-          <Text>REPROGRAMADO</Text>
-          <Text>numero</Text>
-        </View>
-        <View styles={styles.view}>
-          <Text>EFECTIVIDAD DE ORDENES</Text>
-          <Text>circulo de porcentaje</Text>
-        </View>
-        <View styles={styles.view}>
-          <Text>AVANCE DE VIAJES</Text>
-          <Text>circulo de porcentaje</Text>
-        </View>
-      </View>
-    )
+           <Text>numero</Text>
+         </View>
+        <Footer/> 
+        </Content>
+      </Container>
+    );
   }
-} 
-const styles = StyleSheet.create({
-  containerView: {
-    flex:1,
-    backgroundColor: '#fff',
-    justifyContent: 'center',
-  },
-   labelView:{
-    flex:1,
-    color: 'black',
-    backgroundColor:'red',
-   }
-});
+}
