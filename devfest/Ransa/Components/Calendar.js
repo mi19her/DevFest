@@ -39,7 +39,6 @@ export default class Calendar extends React.Component {
       if (action === "dateSetAction") {
         const selectedDate = new Date(year, month, day);
         this.setState({ chosenDate: selectedDate });
-        this.props.onDateChange(selectedDate);
       }
     } catch ({ code, message }) {
       console.warn("Cannot open date picker", message);
