@@ -1,6 +1,19 @@
-// import React from 'react';
-// import {View, Text} from 'react-native';
+import React, { Component } from "react";
 
-// const Menu = () =>{
+// import { Image } from "react-native";
+import { Container, Content, Footer, Text } from 'native-base';
 
-// }
+export default class Menu extends Component {
+  render() {
+    return (
+      <Container>
+        <Content padder>
+          <Text>
+            This is Content Section
+          </Text>
+        </Content>
+        <Footer />
+      </Container>
+    );
+  }
+}

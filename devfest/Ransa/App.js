@@ -1,52 +1,15 @@
-// import {createAppContainer} from 'react-navigation';
-// import {createStackNavigator} from 'react-navigation-stack';
-// import FixedLabelExample from './Screem/Login.js';
-// // import Menu from './Screem/Profile';
-
-// const MainNavigator = createStackNavigator({
-//   Login: {screen: FixedLabelExample},
-//   // Menu: {screen:}
-// });
-
-// const App = createAppContainer(MainNavigator);
-
-// export default App;
-
-import React, { Component } from "react";
-import { Root } from "native-base";
-import { AppLoading } from "expo";
-import * as Font from 'expo-font';
+import {createAppContainer} from 'react-navigation';
+import {createStackNavigator} from 'react-navigation-stack';
 import FixedLabelExample from './Screem/Login.js';
+import Menu from './Screem/Menu';
 
 
-class App extends Component {
-  constructor(props) {
-    super(props);
-    this.state = { loading: true };
-  }
+const MainNavigator = createStackNavigator({
+  Login: {screen: FixedLabelExample},
+  Menu: {screen: Menu},
+});
 
-  async componentWillMount() {
-    await Font.loadAsync({
-      Roboto: require("native-base/Fonts/Roboto.ttf"),
-      Roboto_medium: require("native-base/Fonts/Roboto_medium.ttf")
-    });
-    this.setState({ loading: false });
-  }
-
-  render() {
-    if (this.state.loading) {
-      return (
-        <Root>
-          <AppLoading />
-        </Root>
-      );
-    }
-    return (
-      <Root>
-        <FixedLabelExample />
-      </Root>
-    );
-  }
-}
+const App = createAppContainer(MainNavigator);
 
 export default App;
+
