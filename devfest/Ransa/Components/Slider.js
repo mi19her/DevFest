@@ -25,7 +25,6 @@ export default class TabsExample extends Component {
             <Tab4 />
           </Tab>
         </Tabs>
-        <AutoCompleteInput/>
       </Container>
     );
   }
