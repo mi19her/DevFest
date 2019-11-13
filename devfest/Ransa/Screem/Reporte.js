@@ -3,6 +3,9 @@ import React, { Component } from "react";
 import { Container, Footer, Content} from 'native-base';
 import {StyleSheet, View, Text} from "react-native";
 import ProgressCircle from 'react-native-progress-circle'
+import AutocompleteInput from '../Components/Autocomplete-input';
+import Calendar from '../Components/Calendar'
+
 export default class Reporte extends Component {
     static navigationOptions = {
         title: 'Welcome to Report',
@@ -11,11 +14,9 @@ export default class Reporte extends Component {
   render() {
  
     return (
-
        <Container>
          <Content>
-       
-        <View>
+          <View>
           <View style={styles.viewGeneral}>
           <ProgressCircle
             percent={30}
@@ -55,6 +56,7 @@ export default class Reporte extends Component {
           </View>
           </View>
           </View>
+         <Calendar/>
         <Footer/> 
         </Content>
       </Container>
