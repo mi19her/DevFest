@@ -1,20 +1,26 @@
 
 import React, { Component } from "react";
-import { Container, Footer, Content} from 'native-base';
+import { Container, Footer, Content, Header} from 'native-base';
 import { View, Text} from "react-native";
 import AutocompleteInput from '../Components/Autocomplete-input';
 import Calendar from '../Components/Calendar'
 
 export default class Reporte extends Component {
     static navigationOptions = {
-        title: 'Welcome to Report',
+        title: 'Tracking',
+        headerTintColor:'#fff',
+        headerStyle:{
+          backgroundColor:'#009B3A',         
+        },
       };
     
   render() {
     return (
        <Container>
+          <Header style={{ backgroundColor: "#009B3A" }}>
+          <Calendar/>
+          </Header>
          <Content>
-         <Calendar/>
         <AutocompleteInput/>
         <View>
           <Text>TOTAL DE ORDENES</Text>

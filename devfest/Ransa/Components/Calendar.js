@@ -67,7 +67,6 @@ export default class Calendar extends React.Component {
               ?  <Text>{this.formatChosenDate(this.state.chosenDate)}</Text> 
               : <Icon name="ios-calendar" />}
           </TouchableOpacity>
-         
           <TouchableOpacity
             onPress={() => this.setState({ modalVisible: false })}
           />
