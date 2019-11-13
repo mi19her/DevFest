@@ -4,6 +4,9 @@ import React, { Component } from "react";
 import { Container, Content, Footer, Text } from 'native-base';
 
 export default class Menu extends Component {
+    static navigationOptions = {
+        title: 'Welcome to Ransa',
+      };
   render() {
     return (
       <Container>

@@ -15,13 +15,14 @@ import {
   Text,
 } from "native-base";
 
+
 export default class FixedLabelExample extends Component {
   constructor(props) {
     super(props);
     this.state = { loading: true };
   }
 
-  async componentDidMount() {
+  async componentWillMount() {
     await Font.loadAsync({
       Roboto: require("D:/devfest/Ransa/node_modules/native-base/Fonts/Roboto.ttf"),
       Roboto_medium: require("D:/devfest/Ransa/node_modules/native-base/Fonts/Roboto_medium.ttf"),
@@ -37,6 +38,8 @@ export default class FixedLabelExample extends Component {
         </Root>
       );
     }
+    
+    const {navigate} = this.props.navigation;
     return (
       <Container>
         <Header />
@@ -52,7 +55,7 @@ export default class FixedLabelExample extends Component {
               <Input />
             </Item>
           </Form>
-          <Button success onPress={() => navigate("Menu")}>
+          <Button success onPress={() => navigate('Menu')}>
             <Text> Success </Text>
           </Button>
         </Content>
