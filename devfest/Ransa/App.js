@@ -4,6 +4,7 @@ import FixedLabelExample from './Screem/Login.js';
 import Menu from './Screem/Menu';
 import Reporte from './Screem/Reporte';
 import Trazabilidad from './Screem/Trazabilidad';
+import Filter from './Screem/Filter';
 
 
 const MainNavigator = createStackNavigator({
@@ -11,6 +12,7 @@ const MainNavigator = createStackNavigator({
   Menu: {screen: Menu},
   Reporte: {screen: Reporte},
   Trazabilidad: {screen: Trazabilidad},
+  Filter: {screen: Filter},
 });
 
 const App = createAppContainer(MainNavigator);
