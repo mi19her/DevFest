@@ -1,15 +1,15 @@
+
 import React, { Component } from 'react';
 import {StyleSheet,Image} from 'react-native';
-import { View, Text, Container ,Left, Right, Body, Icon} from 'native-base';
+import { View, Text, Container ,Left, Right, Body} from 'native-base';
 import AutocompleteInput from '../Components/Autocomplete-input';
 export default class ListThumbnailExample extends Component {
-  // TODOS
   render() {
     return (
       <Container>
         <View>
         <AutocompleteInput/>
-            <View style={styles.card}> 
+            <View style={styles.card}>
               <View style={styles.subCar}>
                 <View style={styles.icon}>
                   <Image source={require("../img/car.png")} style={{ width: "15%", height: "17%" ,padding:"5%" ,margin:"3%"}}/>
@@ -17,16 +17,17 @@ export default class ListThumbnailExample extends Component {
                 </View>
                 <View style={styles.icon}>
                   <Image source={require("../img/house.png")} style={{ width: "15%", height: "17%" ,padding:"5%" ,margin:"3%"}}/>
-                  <Text style={styles.fontLess}>   5 destinos</Text>
+                  <Text style={styles.fontLess}>   3 destinos</Text>
                 </View>
                 <View style={styles.icon}>
                   <Image source={require("../img/box.png")} style={{ width: "15%", height: "17%" ,padding:"5%", margin:"3%"}}/>
-                  <Text style={styles.fontLess}>   5 órdenes</Text>
+                  <Text style={styles.fontLess}>   4/5 órdenes</Text>
                 </View> 
               </View>
               <View style={styles.ContainerIcon}>
               <View style={styles.icon}>
-                  <Text style={styles.fontLess}>   Programado</Text>
+                  <Image source={require("../img/time-red.png")} style={{ width: "15%", height: "17%" ,padding:"5%",  margin:"6%"}}/>
+                  <Text style={styles.fontLess}>   Retraso</Text>
               </View>      
               </View>
           </View>
@@ -34,20 +35,21 @@ export default class ListThumbnailExample extends Component {
               <View style={styles.subCar}>
                 <View style={styles.icon}>
                   <Image source={require("../img/car.png")} style={{ width: "15%", height: "17%" ,padding:"5%" ,margin:"3%"}}/>
-                  <Text style={styles.font}>   ZKJ - 569</Text>
+                  <Text style={styles.font}>   AVL - 855</Text>
                 </View>
                 <View style={styles.icon}>
                   <Image source={require("../img/house.png")} style={{ width: "15%", height: "17%" ,padding:"5%" ,margin:"3%"}}/>
-                  <Text style={styles.fontLess}>   10 destinos</Text>
+                  <Text style={styles.fontLess}>   3 destinos</Text>
                 </View>
                 <View style={styles.icon}>
                   <Image source={require("../img/box.png")} style={{ width: "15%", height: "17%" ,padding:"5%", margin:"3%"}}/>
-                  <Text style={styles.fontLess}>   10 órdenes</Text>
+                  <Text style={styles.fontLess}>   4/5 órdenes</Text>
                 </View> 
               </View>
               <View style={styles.ContainerIcon}>
               <View style={styles.icon}>
-                  <Text style={styles.fontLess}>   Programado</Text>
+                  <Image source={require("../img/time-red.png")} style={{ width: "15%", height: "17%" ,padding:"5%",  margin:"6%"}}/>
+                  <Text style={styles.fontLess}>   Retraso</Text>
               </View>      
               </View>
           </View>
@@ -55,21 +57,22 @@ export default class ListThumbnailExample extends Component {
               <View style={styles.subCar}>
                 <View style={styles.icon}>
                   <Image source={require("../img/car.png")} style={{ width: "15%", height: "17%" ,padding:"5%" ,margin:"3%"}}/>
-                  <Text style={styles.font}>   HUJ - 254</Text>
+                  <Text style={styles.font}>   AVL - 855</Text>
                 </View>
                 <View style={styles.icon}>
                   <Image source={require("../img/house.png")} style={{ width: "15%", height: "17%" ,padding:"5%" ,margin:"3%"}}/>
-                  <Text style={styles.fontLess}>   6 destinos</Text>
+                  <Text style={styles.fontLess}>   3 destinos</Text>
                 </View>
                 <View style={styles.icon}>
                   <Image source={require("../img/box.png")} style={{ width: "15%", height: "17%" ,padding:"5%", margin:"3%"}}/>
-                  <Text style={styles.fontLess}>   3 órdenes</Text>
+                  <Text style={styles.fontLess}>   4/5 órdenes</Text>
                 </View> 
               </View>
               <View style={styles.ContainerIcon}>
               <View style={styles.icon}>
-                  <Text style={styles.fontLess}>   Programado</Text>
-              </View> 
+                  <Image source={require("../img/time-green.png")} style={{ width: "15%", height: "17%" ,padding:"5%",  margin:"6%"}}/>
+                  <Text style={styles.fontLess}>   A tiempo</Text>
+              </View>      
               </View>
           </View>
       </View>
