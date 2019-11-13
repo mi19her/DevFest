@@ -1,7 +1,8 @@
 {
   "expo": {
     "name": "Ransa",
-    "slug": "Ransa",
+    "icon": "./assets/icon.png",
+    "slug": "ransa-ari",
     "privacy": "public",
     "sdkVersion": "35.0.0",
     "platforms": [
@@ -9,9 +10,14 @@
       "android",
       "web"
     ],
+    "ios": {
+      "bundleIdentifier": "com.ransa.ransa360"
+    },
+    "android": {
+      "package": "com.ransa.ransa360"
+    },
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
@@ -22,9 +28,7 @@
     },
     "assetBundlePatterns": [
       "**/*"
-    ],
-    "ios": {
-      "supportsTablet": true
-    }
+    ]
+    
   }
 }
