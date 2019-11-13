@@ -1,5 +1,5 @@
 import React from "react";
-import { Icon} from "native-base";
+import { Icon, Text} from "native-base";
 import { View, DatePickerAndroid, TouchableOpacity } from "react-native";
 
 export default class Calendar extends React.Component {
@@ -50,7 +50,6 @@ export default class Calendar extends React.Component {
     if (this.props.formatChosenDate) {
       return this.props.formatChosenDate(date);
     }
-    console.log([date.getDate(), date.getMonth() + 1, date.getFullYear()].join("/"))
     return [date.getDate(), date.getMonth() + 1, date.getFullYear()].join("/");
   }
 
@@ -65,8 +64,11 @@ export default class Calendar extends React.Component {
                 this.state.chosenDate, 
             ]}
           >
-            {<Icon name="ios-calendar" />}
+            { this.state.chosenDate
+              ?  <Text>{this.formatChosenDate(this.state.chosenDate)}</Text> 
+              : <Icon name="ios-calendar" />}
           </TouchableOpacity>
+         
           <TouchableOpacity
             onPress={() => this.setState({ modalVisible: false })}
           />
