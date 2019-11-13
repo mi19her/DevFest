@@ -81,12 +81,12 @@
 //     alignContent:'center',
 //   }
 // });
-import { AppLoading } from "expo";
+
 import * as Font from "expo-font";
 import * as React from 'react';
 import { Text,TextInput,View,ImageBackground, StyleSheet,Image  } from 'react-native';
 import { Button, Icon} from "native-base"
-import PasswordInputText from 'react-native-hide-show-password-input';
+
 
 
 export default class LoginScreen extends React.Component {
@@ -131,8 +131,7 @@ export default class LoginScreen extends React.Component {
             </View>
            
             <View style={styles.containerUserName}>
-              <TextInput 
-              style={styles.textInput} value={this.state.password}/> 
+            <TextInput style={{height: 40, borderColor: 'gray', borderWidth: 1}} onChangeText={(text) => this.setState({input: text})}       />
             </View>
 
             <View style={styles.containerSignIn}>
