@@ -139,15 +139,8 @@ export default class LoginScreen extends React.Component {
            <Text style={{color:'white'}}> INGRESA </Text>
            </Button>
             </View>
-            
-            
-
-
-           
           </View>  
             </ImageBackground>
-
-       
     );
   }
 }
