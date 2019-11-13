@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import {StyleSheet,Image} from 'react-native';
-import { View, Text, Container ,Left, Right, Body, Icon, Linking} from 'native-base';
+import { View, Text, Container ,Left, Right, Body, Icon} from 'native-base';
 import AutocompleteInput from '../Components/Autocomplete-input';
 export default class ListThumbnailExample extends Component {
   // TODOS

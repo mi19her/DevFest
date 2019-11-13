@@ -1,86 +1,3 @@
-// import { AppLoading } from "expo";
-// import * as Font from "expo-font";
-// import React, { Component } from "react";
-// import { Image, StyleSheet,ImageBackground, View} from "react-native";
-// import {
-//   Root,
-//   Container,
-//   Form,
-//   Item,
-//   Input,
-//   Label,
-//   Button,
-//   Text,
-// } from "native-base";
-
-// export default class FixedLabelExample extends Component {
-//  static navigationOptions ={
-//    header: null
-//  }
-//   constructor(props) {
-//     super(props);
-//     this.state = { loading: true };
-//   }
-
-//   async componentDidMount() {
-//     await Font.loadAsync({
-//       Roboto: require("../node_modules/native-base/Fonts/Roboto.ttf"),
-//       Roboto_medium: require("../node_modules/native-base/Fonts/Roboto_medium.ttf"),
-//     });
-//     this.setState({ loading: false });
-//   }
-
-//   render() {
-//     if (this.state.loading) {
-//       return (
-//         <Root>
-//           <AppLoading />
-//         </Root>
-//       );
-//     }
-
-//     const {navigate} = this.props.navigation;
-//     return (
-//       <Container  style={styles.container}>
-//          <ImageBackground source={require('../img/imagenlogin.jpg')} style={{width: '100%', height: '100%'}} >
-//          <Image source={require("../img/logo-1.png")} style={{ width: 160, height: 30 }} />
-//          <View>
-//          <Form style={styles.box}>
-//             <Item fixedLabel style={styles.labels}>
-//               <Label>Username</Label>
-//               <Input />
-//             </Item>
-//             <Item fixedLabel last style={styles.labels}>
-//               <Label>Password</Label>
-//               <Input />
-//             </Item>
-//           </Form>
-//           <Button success block onPress={() => navigate('Menu')}>
-//             <Text> ENTRAR </Text>
-//           </Button>
-//         </View>
-//          </ImageBackground>
-//       </Container>
-//     );
-//   }
-// }
-
-// const styles = StyleSheet.create({
-//   container: {
-//     flex: 1,
-//     justifyContent:'center',
-//     alignContent:'center',
-//     backgroundColor: "#fff"},
-//   labels: {
-//     backgroundColor: "#fff"
-//   },
-//   box:{
-//     flex: 1,
-//     justifyContent:'center',
-//     alignContent:'center',
-//   }
-// });
-
 import * as Font from "expo-font";
 import * as React from 'react';
 import { Text,TextInput,View,ImageBackground, StyleSheet,Image  } from 'react-native';
@@ -119,11 +36,10 @@ export default class LoginScreen extends React.Component {
           <View style={styles.containerletters}> 
               <Text style={{color:'white', marginTop:15, fontSize:15}}>Usuario
               </Text>
-            </View>
-           
+            </View>      
             <View style={styles.containerUserName}>
               <TextInput 
-              style={styles.textInput}  /> 
+              style={styles.textInput} value='Tomasmoro@ransa.net' /> 
             </View>
             <View style={styles.containerletters}> 
             <Text style={{color:'white', marginTop:15, fontSize:15, marginRight:30}}>Contraseña
@@ -131,7 +47,7 @@ export default class LoginScreen extends React.Component {
             </View>
            
             <View style={styles.containerUserName}>
-            <TextInput value={this.state.password} textContentType={'password'} multiline={false} secureTextEntry={true} onChangeText={(text) => {  this.setState({ password: text }); }} style={styles.input} placeholder='contraseña' />
+            <TextInput value='ransa360' textContentType={'password'} multiline={false} secureTextEntry={true} onChangeText={(text) => {  this.setState({ password: text }); }} style={styles.input} placeholder='contraseña' />
             </View>
 
             <View style={styles.containerSignIn}>
@@ -141,6 +57,8 @@ export default class LoginScreen extends React.Component {
             </View>
           </View>  
             </ImageBackground>
+
+       
     );
   }
 }
