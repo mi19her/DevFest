@@ -1,16 +1,17 @@
 import React, { Component } from "react";
-import { Container, Content, Footer, Text } from 'native-base';
+import {Footer, Text, Container} from 'native-base';
+import Calendar from '../Components/Calendar'
 
 export default class Reporte extends Component {
     static navigationOptions = {
         title: 'Welcome to Report',
       };
+    
   render() {
     return (
       <Container>
-        <Content padder>
             <Text> estas en Reporte </Text>
-        </Content>
+            <Calendar/>
         <Footer />
       </Container>
     );
