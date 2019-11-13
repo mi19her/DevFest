@@ -2,13 +2,7 @@ import React, { Component } from 'react';
 import { Image, StyleSheet } from 'react-native';
 import { Container, Button, Text, View, Icon,Left,Right,Body,Header,Title} from 'native-base';
 export default class SegmentOutsideHeaderExample extends Component {
-  // static navigationOptions = {
-  //   title: 'Hola, Juan',
-  //   headerTintColor:'#fff',
-  //   headerStyle:{
-  //     backgroundColor:'#009B3A',
-    
-  //   }
+
   static navigationOptions ={
     header: null
   }
@@ -22,7 +16,7 @@ export default class SegmentOutsideHeaderExample extends Component {
       <Container style={{alignContent:'stretch',backgroundColor:'#E5E5E5'}}>
         <Header style={{backgroundColor:'#009B3A', marginTop:25, padding:35}}>
         <Body>
-            <Title style={{marginTop:35}}>Hola, Juan</Title>
+            <Title style={{marginTop:35}}>Hola Tomas</Title>
           </Body>
           <Right>
           <Image source={require("../img/logsam.png")} style={{borderRadius:40, marginTop:35}}/>
@@ -32,7 +26,7 @@ export default class SegmentOutsideHeaderExample extends Component {
         </Header>
        
         
-          <Text style={{color:'#009B3A',fontWeight:'bold', textAlign:'center', margin:30, fontSize:20}}>¿Qué Necesitas Saber Hoy?</Text>
+          <Text style={{color:'#009B3A',fontWeight:'bold', textAlign:'center', margin:30, fontSize:20}}>¿Qué necesitas saber hoy?</Text>
        
         
          <View style={styles.view}>

@@ -52,15 +52,15 @@ export default class Reporte extends Component {
          <Text style={{ fontSize: 10, color: "#ffffff", textAlign: 'center' }}>PARCIAL</Text>
          </View>
          <View style={{ backgroundColor: "#009B3A", padding:5 }} >
-         <Text style={{ fontSize: 19, color: "#ffffff", textAlign: 'center',fontWeight:'bold'}}>5</Text>
+         <Text style={{ fontSize: 19, color: "#ffffff", textAlign: 'center',fontWeight:'bold'}}>0</Text>
          <Text style={{ fontSize: 10, color: "#ffffff", textAlign: 'center' }}>REPROGRAMA</Text>
          </View>
          <View style={{ backgroundColor: "#009B3A", padding:5  }}>
-         <Text style={{ fontSize: 19, color: "#ffffff", textAlign: 'center',fontWeight:'bold'}}>5</Text>
+         <Text style={{ fontSize: 19, color: "#ffffff", textAlign: 'center',fontWeight:'bold'}}>0</Text>
          <Text style={{ fontSize: 10, color: "#ffffff", textAlign: 'center' }}>RECHAZADO</Text>
          </View>
          <View style={{ backgroundColor: "#009B3A", padding:5 }}>
-         <Text style={{ fontSize: 19, color: "#ffffff", textAlign: 'center',fontWeight:'bold'}}>5</Text>
+         <Text style={{ fontSize: 19, color: "#ffffff", textAlign: 'center',fontWeight:'bold'}}>0</Text>
          <Text style={{ fontSize: 10, color: "#ffffff", textAlign: 'center' }}>CANCELADO</Text>
          </View>
        </View>

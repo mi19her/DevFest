@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import {StyleSheet,Image} from 'react-native';
-import { View, Text, Container ,Left, Right, Body} from 'native-base';
+import { View, Text, Container ,Left, Right, Body, Icon} from 'native-base';
 import AutocompleteInput from '../Components/Autocomplete-input';
 export default class ListThumbnailExample extends Component {
   render() {
@@ -71,7 +71,8 @@ export default class ListThumbnailExample extends Component {
               <View style={styles.icon}>
                   <Image source={require("../img/time-green.png")} style={{ width: "15%", height: "17%" ,padding:"5%",  margin:"6%"}}/>
                   <Text style={styles.fontLess}>   A tiempo</Text>
-              </View>      
+              </View>
+              <Icon style={{ fontSize: 18 }} name="remove-circle" />   
               </View>
           </View>
       </View>
