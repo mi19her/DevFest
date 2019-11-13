@@ -21,11 +21,14 @@ export default class SegmentOutsideHeaderExample extends Component {
     return (
       <Container style={{alignContent:'stretch',backgroundColor:'#E5E5E5'}}>
         <Header style={{backgroundColor:'#009B3A', marginTop:25, padding:35}}>
+        <Left>
+          <Image source={require("../img/logsam.png")} style={{borderRadius:40, marginTop:35}}/>
+          </Left>
         <Body>
             <Title style={{marginTop:35}}>Hola, Juan</Title>
           </Body>
           <Right>
-          <Image source={require("../img/logsam.png")} style={{borderRadius:40, marginTop:35}}/>
+          <Icon name='md-log-out' style={{color:'#fff', fontSize:50,marginTop:35}} onPress={() => navigate('Login')}/>
           </Right>
          
           
@@ -70,7 +73,7 @@ export default class SegmentOutsideHeaderExample extends Component {
          </View>
          <View style={styles.view}>
          <Button  style={styles.buttons}>
-         <Image style={styles.img2} source={require('../img/Noticias.png')}/>
+         <Image style={styles.img2} source={require('../img/indicadores.png')}/>
             <Text style={styles.text}>Indicadores de Gestión</Text>
           </Button>
           <Button style={styles.buttons}>
