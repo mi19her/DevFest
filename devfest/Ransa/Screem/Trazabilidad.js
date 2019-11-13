@@ -5,7 +5,7 @@ import { Container, Header, Item, Input, Icon, Button } from "native-base";
 
 export default class SearchBarExample extends Component {
   static navigationOptions = {
-    title: 'Trazabilidad',
+    title: 'Seguimiento en Línea',
     headerTintColor:'#fff',
     headerStyle:{
       backgroundColor:'#009B3A'

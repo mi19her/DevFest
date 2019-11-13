@@ -125,7 +125,7 @@ export default class LoginScreen extends React.Component {
            
             <View style={styles.containerUserName}>
               <TextInput 
-              style={styles.textInput}/> 
+              style={styles.textInput}  /> 
             </View>
             <View style={styles.containerletters}> 
             <Text style={{color:'white', marginTop:15, fontSize:15, marginRight:30}}>Contraseña
@@ -133,7 +133,7 @@ export default class LoginScreen extends React.Component {
             </View>
            
             <View style={styles.containerUserName}>
-            <TextInput value={this.state.password} textContentType={'password'} multiline={false} secureTextEntry={true} onChangeText={(text) => {  this.setState({ password: text }); }} style={styles.input} placeholder='' />
+            <TextInput value={this.state.password} textContentType={'password'} multiline={false} secureTextEntry={true} onChangeText={(text) => {  this.setState({ password: text }); }} style={styles.input} placeholder='contraseña' />
             </View>
 
             <View style={styles.containerSignIn}>
@@ -204,6 +204,7 @@ const styles = StyleSheet.create({
     backgroundColor:'transparent',
     flex:5,
     color:'black',
+    alignSelf:"center",
     paddingLeft:'25%'
   }
 })
