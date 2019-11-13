@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { Container, Footer, Content, StyleProvider } from 'native-base';
 import {StyleSheet, View, Text} from "react-native";
-import Slider from '../Components/Slider';
 import ProgressCircle from 'react-native-progress-circle'
 import Calendar from '../Components/Calendar'
 import getTheme from '../native-base-theme/components';

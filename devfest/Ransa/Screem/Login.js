@@ -111,8 +111,7 @@ export default class LoginScreen extends React.Component {
   render() {
    
     const {navigate} = this.props.navigation;
-    return (
-      
+    return (      
       <ImageBackground source={require("../img/imagenlogin.png")} style={{width: '100%', height: '100%', backgroundColor:'black'}}>
           <View style={styles.container}>
           <Image source={require("../img/logo-1.png")} style={{ width: 280, marginBottom:100,alignSelf:'center' }} />
