@@ -1,23 +1,10 @@
-// import {createAppContainer} from 'react-navigation';
-// import {createStackNavigator} from 'react-navigation-stack';
-// import FixedLabelExample from './Screem/Login.js';
-// // import Menu from './Screem/Profile';
-
-// const MainNavigator = createStackNavigator({
-//   Login: {screen: FixedLabelExample},
-//   // Menu: {screen:}
-// });
-
-// const App = createAppContainer(MainNavigator);
-
-// export default App;
 
 import React, { Component } from "react";
 import { Root } from "native-base";
 import { AppLoading } from "expo";
 import * as Font from 'expo-font';
 import FixedLabelExample from './Screem/Login.js';
-
+import MainReporter from './Screem/Reporte';
 
 class App extends Component {
   constructor(props) {
@@ -44,6 +31,7 @@ class App extends Component {
     return (
       <Root>
         <FixedLabelExample />
+        <MainReporter/>
       </Root>
     );
   }
