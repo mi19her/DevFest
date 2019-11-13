@@ -11,7 +11,6 @@ export default class TabsExample extends Component {
     return (
       <Container>
         <Tabs style={styles.tab}>
-        <Tabs >
           <Tab heading="Todos">
             <Tab1 />
           </Tab>

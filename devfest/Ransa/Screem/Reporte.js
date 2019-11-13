@@ -5,6 +5,7 @@ import ProgressCircle from 'react-native-progress-circle'
 import Calendar from '../Components/Calendar'
 import getTheme from '../native-base-theme/components';
 import material from '../native-base-theme/variables/material';
+import Slider from '../Components/Slider'
 
 export default class Reporte extends Component {
     static navigationOptions = {
