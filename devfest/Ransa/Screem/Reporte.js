@@ -15,7 +15,7 @@ export default class Reporte extends Component {
           backgroundColor:'#009B3A',         
         },
         headerRight: () => (
-          <Calendar/>
+          <Calendar style={{backgroundColor:'#009B3A'}}/>
         ),
       };
     
