@@ -85,11 +85,14 @@ import { AppLoading } from "expo";
 import * as Font from "expo-font";
 import * as React from 'react';
 import { Text,TextInput,View,ImageBackground, StyleSheet,Image  } from 'react-native';
-import { Button, Left } from "native-base"
-
+import { Button, Icon} from "native-base"
+import PasswordInputText from 'react-native-hide-show-password-input';
 
 
 export default class LoginScreen extends React.Component {
+  state = {
+    password: '',
+};
   static navigationOptions ={
        header: null
      }
@@ -129,7 +132,7 @@ export default class LoginScreen extends React.Component {
            
             <View style={styles.containerUserName}>
               <TextInput 
-              style={styles.textInput}/> 
+              style={styles.textInput} value={this.state.password}/> 
             </View>
 
             <View style={styles.containerSignIn}>
@@ -139,6 +142,8 @@ export default class LoginScreen extends React.Component {
             </View>
             
             
+
+
            
           </View>  
             </ImageBackground>
@@ -149,6 +154,7 @@ export default class LoginScreen extends React.Component {
 }
 
 const styles = StyleSheet.create({
+ 
   container:{
     flex:1,
     flexDirection: 'column',
@@ -171,6 +177,7 @@ const styles = StyleSheet.create({
     marginLeft:'6%',
     marginBottom:'2%',
     marginRight:'6%',
+    borderRadius:10
 
   },
   containerPassword:{

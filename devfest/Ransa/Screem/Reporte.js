@@ -8,13 +8,13 @@ import Calendar from '../Components/Calendar'
 export default class Reporte extends Component {
     static navigationOptions = {
         title: 'Welcome to Report',
+        name:'Calendar'
       };
     
   render() {
     return (
        <Container>
          <Content>
-         <Calendar/>
         <AutocompleteInput/>
         <View>
           <Text>TOTAL DE ORDENES</Text>
