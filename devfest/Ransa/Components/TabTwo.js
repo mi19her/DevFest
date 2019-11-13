@@ -4,6 +4,7 @@ import { View, Text, Container ,Left, Right, Body} from 'native-base';
 import AutocompleteInput from '../Components/Autocomplete-input';
 export default class ListThumbnailExample extends Component {
   render() {
+    // programado
     return (
       <Container>
         <View>
@@ -12,20 +13,19 @@ export default class ListThumbnailExample extends Component {
               <View style={styles.subCar}>
                 <View style={styles.icon}>
                   <Image source={require("../img/car.png")} style={{ width: "15%", height: "17%" ,padding:"5%" ,margin:"3%"}}/>
-                  <Text style={styles.font}>   AVL - 855</Text>
+                  <Text style={styles.font}>   MKI - 156</Text>
                 </View>
                 <View style={styles.icon}>
                   <Image source={require("../img/house.png")} style={{ width: "15%", height: "17%" ,padding:"5%" ,margin:"3%"}}/>
-                  <Text style={styles.fontLess}>   3 destinos</Text>
+                  <Text style={styles.fontLess}>   1 destino</Text>
                 </View>
                 <View style={styles.icon}>
                   <Image source={require("../img/box.png")} style={{ width: "15%", height: "17%" ,padding:"5%", margin:"3%"}}/>
-                  <Text style={styles.fontLess}>   4/5 órdenes</Text>
+                  <Text style={styles.fontLess}>   1 órden</Text>
                 </View> 
               </View>
               <View style={styles.ContainerIcon}>
               <View style={styles.icon}>
-                  <Image source={require("../img/time-red.png")} style={{ width: "15%", height: "17%" ,padding:"5%",  margin:"6%"}}/>
                   <Text style={styles.fontLess}>   Programado</Text>
               </View>      
               </View>
@@ -34,20 +34,19 @@ export default class ListThumbnailExample extends Component {
               <View style={styles.subCar}>
                 <View style={styles.icon}>
                   <Image source={require("../img/car.png")} style={{ width: "15%", height: "17%" ,padding:"5%" ,margin:"3%"}}/>
-                  <Text style={styles.font}>   AVL - 855</Text>
+                  <Text style={styles.font}>   JFB - 564</Text>
                 </View>
                 <View style={styles.icon}>
                   <Image source={require("../img/house.png")} style={{ width: "15%", height: "17%" ,padding:"5%" ,margin:"3%"}}/>
-                  <Text style={styles.fontLess}>   3 destinos</Text>
+                  <Text style={styles.fontLess}>   2 destinos</Text>
                 </View>
                 <View style={styles.icon}>
                   <Image source={require("../img/box.png")} style={{ width: "15%", height: "17%" ,padding:"5%", margin:"3%"}}/>
-                  <Text style={styles.fontLess}>   4/5 órdenes</Text>
+                  <Text style={styles.fontLess}>   5 órdenes</Text>
                 </View> 
               </View>
               <View style={styles.ContainerIcon}>
               <View style={styles.icon}>
-                  <Image source={require("../img/time-red.png")} style={{ width: "15%", height: "17%" ,padding:"5%",  margin:"6%"}}/>
                   <Text style={styles.fontLess}>   Programado</Text>
               </View>      
               </View>
@@ -56,15 +55,15 @@ export default class ListThumbnailExample extends Component {
               <View style={styles.subCar}>
                 <View style={styles.icon}>
                   <Image source={require("../img/car.png")} style={{ width: "15%", height: "17%" ,padding:"5%" ,margin:"3%"}}/>
-                  <Text style={styles.font}>   AVL - 855</Text>
+                  <Text style={styles.font}>   DSJ - SJS</Text>
                 </View>
                 <View style={styles.icon}>
                   <Image source={require("../img/house.png")} style={{ width: "15%", height: "17%" ,padding:"5%" ,margin:"3%"}}/>
-                  <Text style={styles.fontLess}>   3 destinos</Text>
+                  <Text style={styles.fontLess}>   7 destinos</Text>
                 </View>
                 <View style={styles.icon}>
                   <Image source={require("../img/box.png")} style={{ width: "15%", height: "17%" ,padding:"5%", margin:"3%"}}/>
-                  <Text style={styles.fontLess}>   4/5 órdenes</Text>
+                  <Text style={styles.fontLess}>   7 órdenes</Text>
                 </View> 
               </View>
               <View style={styles.ContainerIcon}>
