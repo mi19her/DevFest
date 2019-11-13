@@ -36,7 +36,7 @@ export default class SegmentOutsideHeaderExample extends Component {
        
         
          <View style={styles.view}>
-         <Button style={styles.buttons}>
+         <Button style={styles.buttons}  onPress={() => navigate('Reporte')}>
            <Image style={styles.img3} source={require('../img/Tracking.png')}/>
             <Text style={styles.text}>Tracking</Text>
           </Button>

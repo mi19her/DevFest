@@ -4,12 +4,13 @@ import AutoCompleteInput from './Autocomplete-input';
 import Tab1 from './TabOne';
 import Tab2 from './TabTwo';
 import Tab3 from './TabTree';
+
+
 export default class TabsExample extends Component {
   render() {
     return (
       <Container>
-          <AutoCompleteInput/>
-        <Tabs>
+        <Tabs >
           <Tab heading="Todos">
             <Tab1 />
           </Tab>
@@ -20,6 +21,7 @@ export default class TabsExample extends Component {
             <Tab3 />
           </Tab>
         </Tabs>
+        <AutoCompleteInput/>
       </Container>
     );
   }

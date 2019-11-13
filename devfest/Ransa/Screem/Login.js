@@ -13,7 +13,6 @@
 //   Text,
 // } from "native-base";
 
-
 // export default class FixedLabelExample extends Component {
 //  static navigationOptions ={
 //    header: null
@@ -39,7 +38,7 @@
 //         </Root>
 //       );
 //     }
-    
+
 //     const {navigate} = this.props.navigation;
 //     return (
 //       <Container  style={styles.container}>
@@ -72,8 +71,8 @@
 //     justifyContent:'center',
 //     alignContent:'center',
 //     backgroundColor: "#fff"},
-//   labels: { 
-//     backgroundColor: "#fff" 
+//   labels: {
+//     backgroundColor: "#fff"
 //   },
 //   box:{
 //     flex: 1,
@@ -91,23 +90,23 @@ import { Button, Icon} from "native-base";
 
 export default class LoginScreen extends React.Component {
   state = {
-    password: '',
-};
-  static navigationOptions ={
-       header: null
-     }
-      constructor(props) {
-        super(props);
-        this.state = { loading: true };
-      }
-    
-      async componentDidMount() {
-        await Font.loadAsync({
-          Roboto: require("../node_modules/native-base/Fonts/Roboto.ttf"),
-          Roboto_medium: require("../node_modules/native-base/Fonts/Roboto_medium.ttf"),
-        });
-        this.setState({ loading: false });
-      }
+    password: ""
+  };
+  static navigationOptions = {
+    header: null
+  };
+  constructor(props) {
+    super(props);
+    this.state = { loading: true };
+  }
+
+  async componentDidMount() {
+    await Font.loadAsync({
+      Roboto: require("../node_modules/native-base/Fonts/Roboto.ttf"),
+      Roboto_medium: require("../node_modules/native-base/Fonts/Roboto_medium.ttf")
+    });
+    this.setState({ loading: false });
+  }
 
   render() {
    
@@ -155,50 +154,47 @@ export default class LoginScreen extends React.Component {
 }
 
 const styles = StyleSheet.create({
- 
-  container:{
-    flex:1,
-    flexDirection: 'column',
-    justifyContent:'center',
-    alignItems: 'stretch',
-    height:'auto',
-   
+  container: {
+    flex: 1,
+    flexDirection: "column",
+    justifyContent: "center",
+    alignItems: "stretch",
+    height: "auto"
   },
-  containerSignIn:{
+  containerSignIn: {
     height: 60,
-    marginLeft:'6%',
-    marginRight:'6%',
-    paddingTop:'2%'
+    marginLeft: "6%",
+    marginRight: "6%",
+    paddingTop: "2%"
   },
-  containerUserName:{
+  containerUserName: {
     height: 60,
-    flexDirection:'row',
-    justifyContent:'center',
-    backgroundColor:'#ffffff',
-    marginLeft:'6%',
-    marginBottom:'2%',
-    marginRight:'6%',
-    borderRadius:10
+    flexDirection: "row",
+    justifyContent: "center",
+    backgroundColor: "#ffffff",
+    marginLeft: "6%",
+    marginBottom: "2%",
+    marginRight: "6%",
+    borderRadius: 10
+  },
+  containerPassword: {
+    height: 60,
+    flexDirection: "row",
+    justifyContent: "center",
+    backgroundColor: "#ffffff",
+    marginLeft: "6%",
+    marginBottom: "15%",
+    marginRight: "6%"
+  },
 
-  },
-  containerPassword:{
+  containerletters: {
     height: 60,
-    flexDirection:'row',
-    justifyContent:'center',
-    backgroundColor:'#ffffff',
-    marginLeft:'6%',
-    marginBottom:'15%',
-    marginRight:'6%',
+    marginLeft: "6%",
+    marginRight: "6%",
+    justifyContent: "flex-start"
   },
- 
-  containerletters:{
-    height: 60,
-    marginLeft:'6%',
-    marginRight:'6%',
-   justifyContent:'flex-start',
-  },
-  icon:{
-    flex:1
+  icon: {
+    flex: 1
   },
   textInput:{
     backgroundColor:'transparent',
@@ -207,4 +203,4 @@ const styles = StyleSheet.create({
     alignSelf:"center",
     paddingLeft:'25%'
   }
-})
+});
