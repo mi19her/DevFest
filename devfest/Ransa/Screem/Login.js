@@ -1,34 +1,63 @@
-import React, { Component } from 'react';
-import { Image } from 'react-native';
-import { Container, Content, Item, Input,Button, Text, CardItem, Card, Body} from 'native-base';
-export default class login extends Component {
+import { AppLoading } from "expo";
+import * as Font from "expo-font";
+import React, { Component } from "react";
+import { Image } from "react-native";
+import {
+  Root,
+  Container,
+  Header,
+  Content,
+  Form,
+  Item,
+  Input,
+  Label,
+  Button,
+  Text,
+} from "native-base";
+
+
+export default class FixedLabelExample extends Component {
+  constructor(props) {
+    super(props);
+    this.state = { loading: true };
+  }
+
+  async componentDidMount() {
+    await Font.loadAsync({
+      Roboto: require("../node_modules/native-base/Fonts/Roboto.ttf"),
+      Roboto_medium: require("../node_modules/native-base/Fonts/Roboto_medium.ttf"),
+    });
+    this.setState({ loading: false });
+  }
+
   render() {
+    if (this.state.loading) {
+      return (
+        <Root>
+          <AppLoading />
+        </Root>
+      );
+    }
+    
+    const {navigate} = this.props.navigation;
     return (
       <Container>
-       
-        <Content padder style= {{ justifyContent:"center", alignItems:"stretch", flex:1}}>
-         <Card>
-           <CardItem  bordered> 
-           <Image source={require('../img/logo-1.png')} style= {{width:80, height:90, justifyContent:"center", alignItems:"center", flex:1}} />
-           </CardItem>
-           <CardItem bordered> 
-           <Body>
-              <Item floatingLabel>
-      
-             <Input placeholder='Username' />
-              </Item>
-              <Item floatingLabel last>
-             <Input placeholder='Password' />
-              </Item>
-            </Body>
-           </CardItem>
-           <CardItem  >
-             <Button block success style= {{ height:70, justifyContent:"center", alignItems:"stretch", flex:1}} >
-               <Text style= {{textAlign:"center", marginTop: 10, fontSize:30}}> ENTRAR </Text>
-               </Button>
-           </CardItem>
-            </Card>
-
+        <Header />
+        <Content>
+          <Image source={require("../img/logo-1.png")} style={{ width: 160, height: 30 }} />
+          <Form>
+            <Item fixedLabel>
+              <Label>Username</Label>
+              <Input />
+            </Item>
+            <Item fixedLabel last>
+              <Label>Password</Label>
+              <Input />
+            </Item>
+          </Form>
+          <Button success onPress={() => navigate('Trazabilidad')}>
+            <Text> Success </Text>
+          </Button>
         </Content>
 
       </Container>
