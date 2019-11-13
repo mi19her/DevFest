@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { FlatList, StyleSheet, Text, TextInput, View, TouchableOpacity } from 'react-native';
 import {Icon, Item} from 'native-base';
+
 export default class AutoCompleteBasics extends Component {
   constructor(props) {
     super(props);
