@@ -9,7 +9,7 @@ export default class login extends Component {
         <Content padder style= {{ justifyContent:"center", alignItems:"stretch", flex:1}}>
          <Card>
            <CardItem  bordered> 
-           <Image source={require('./img/logo-1.png')} style= {{width:80, height:90, justifyContent:"center", alignItems:"center", flex:1}} />
+           <Image source={require('../img/logo-1.png')} style= {{width:80, height:90, justifyContent:"center", alignItems:"center", flex:1}} />
            </CardItem>
            <CardItem bordered> 
            <Body>

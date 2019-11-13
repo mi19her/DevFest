@@ -17,6 +17,7 @@ import { Root } from "native-base";
 import { AppLoading } from "expo";
 import * as Font from 'expo-font';
 import FixedLabelExample from './Screem/Login.js';
+import Trazabilidad from './Screem/Trazabilidad.js';
 
 
 class App extends Component {
@@ -44,6 +45,7 @@ class App extends Component {
     return (
       <Root>
         <FixedLabelExample />
+        <Trazabilidad />
       </Root>
     );
   }
