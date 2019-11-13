@@ -5,11 +5,13 @@ import Tab1 from './TabOne';
 import Tab2 from './TabTwo';
 import Tab3 from './TabTree';
 import Tab4 from './TabFour';
+
 export default class TabsExample extends Component {
   render() {
     return (
       <Container>
         <Tabs style={styles.tab}>
+        <Tabs >
           <Tab heading="Todos">
             <Tab1 />
           </Tab>
@@ -23,6 +25,7 @@ export default class TabsExample extends Component {
             <Tab4 />
           </Tab>
         </Tabs>
+        <AutoCompleteInput/>
       </Container>
     );
   }

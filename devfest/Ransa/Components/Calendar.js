@@ -1,6 +1,6 @@
 import React from "react";
-import { Icon, Text} from "native-base";
-import { View, DatePickerAndroid, TouchableOpacity } from "react-native";
+import { Text} from "native-base";
+import { Image, View, DatePickerAndroid, TouchableOpacity } from "react-native";
 
 export default class Calendar extends React.Component {
   static defaultProps = {
@@ -65,9 +65,8 @@ export default class Calendar extends React.Component {
           >
             { this.state.chosenDate
               ?  <Text>{this.formatChosenDate(this.state.chosenDate)}</Text> 
-              : <Icon name="ios-calendar" />}
+              : <Image source={require('../img/Calendar.png')} />}
           </TouchableOpacity>
-         
           <TouchableOpacity
             onPress={() => this.setState({ modalVisible: false })}
           />
