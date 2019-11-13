@@ -1,11 +1,11 @@
 import React, { Component } from "react";
 import { Container, Footer, Content, StyleProvider } from 'native-base';
 import {StyleSheet, View, Text} from "react-native";
+import Slider from '../Components/Slider';
 import ProgressCircle from 'react-native-progress-circle'
 import Calendar from '../Components/Calendar'
 import getTheme from '../native-base-theme/components';
 import material from '../native-base-theme/variables/material';
-import Slider from '../Components/Slider'
 
 export default class Reporte extends Component {
     static navigationOptions = {
@@ -15,7 +15,7 @@ export default class Reporte extends Component {
           backgroundColor:'#009B3A',         
         },
         headerRight: () => (
-          <Calendar style={{backgroundColor:'#009B3A'}}/>
+          <Calendar />
         ),
       };
     
